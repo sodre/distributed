@@ -51,11 +51,14 @@ setup(
         "Topic :: Scientific/Engineering",
         "Topic :: System :: Distributed Computing",
     ],
-    entry_points="""
-        [console_scripts]
-        dask-ssh=distributed.cli.dask_ssh:go
-        dask-scheduler=distributed.cli.dask_scheduler:go
-        dask-worker=distributed.cli.dask_worker:go
-      """,
+    entry_points={
+        "console_scripts": [
+            "dask-ssh=distributed.cli.dask_ssh:go",
+            "dask-scheduler=distributed.cli.dask_scheduler:go",
+            "dask-worker=distributed.cli.dask_worker:go",
+        ]
+    },
+    setup_requires=[],
+    tests_require=[],
     zip_safe=False,
 )
